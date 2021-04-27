@@ -3,7 +3,7 @@ A bundle to convert and flash your logo to a Pinecil.
 
 Requirements:
   - Windows 10 x64 PC
-  - Python 3.x must be installed
+  - Python 3.x must be installed and callable via just 'python'
   - Pillow needs to be installed with Pip
   - Your Pinecil must be running IronOS
   - Your Pinecil needs to have the WinUSB driver installed
@@ -22,13 +22,8 @@ How to put your Pinecil into DFU mode:
   You can let go once you hear the 'device connected' sound from Windows.
 
 Instructions:
-  1. Installing Pillow
-    a) If you only have Python 3 installed:
-       pip install Pillow
-
-    b) If you have Python 2 and 3 installed:
-       python3 -m pip install Pillow
-
+  1. Installing Pillow (python 3 must be the default)
+    a) pip install Pillow
 
   2. Installing the WinUSB driver-----------
   If you already did this, skip this part.
