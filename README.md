@@ -2,7 +2,7 @@
 by ThatsNiceGuy - Bundle Version 1.1\
 A bundle to convert and flash a logo to your Pinecil.
 
-I originally wrote it to make flashing a logo to my Pinecil easier
+I originally wrote it to make flashing a logo to my Pinecil easier, and now it became this.
 
 
 ### Requirements
