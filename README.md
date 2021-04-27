@@ -16,7 +16,7 @@ Includes a script, some documentation and other files.
 Instructions and more are in the README.
 
 ### Usage
-Download `make_and_flash_logo-v1.1.zip` from releases, then unzip it and open the README inside.
+Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside.
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
