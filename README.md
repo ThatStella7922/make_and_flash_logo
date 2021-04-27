@@ -2,12 +2,12 @@
 by ThatsNiceGuy - Bundle Version 1.1\
 A bundle to convert and flash a logo to your Pinecil.
 
-Includes a script, some documentation and other files.
+I originally wrote it to make flashing a logo to my Pinecil easier
 
 
 ### Requirements
 - Windows 10 x64 PC
-- Python 3.x must be installed
+- Python 3.x must be installed and callable via just 'python'
 - Pillow needs to be installed with Pip
 - Your Pinecil must be running IronOS
 - Your Pinecil needs to have the WinUSB driver installed
