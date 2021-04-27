@@ -3,7 +3,7 @@ REM The input image must be called logo.png or else this won't work!
 set "version=v1.1"
 set "toolname=make_and_flash_logo"
 cls
-echo %toolname% %version% - (C) ThatsNiceGuy 2021 - Uses binaries not owned by me
+echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
 echo.
 
@@ -24,7 +24,7 @@ echo.
 echo.
 
 cls
-echo %toolname% %version% - (C) ThatsNiceGuy 2021 - Uses binaries not owned by me
+echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
 echo.
 title %toolname% - converting
@@ -40,7 +40,7 @@ echo.
 timeout -t 1 /nobreak > nul
 
 cls
-echo %toolname% %version% - (C) ThatsNiceGuy 2021 - Uses binaries not owned by me
+echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
 echo.
 echo Preparing to flash logo to Pinecil...
