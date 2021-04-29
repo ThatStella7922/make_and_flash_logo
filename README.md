@@ -2,8 +2,10 @@
 by ThatsNiceGuy - Bundle Version 1.1\
 A bundle to convert and flash a logo to your Pinecil.
 
-I originally wrote it to make flashing a logo to my Pinecil easier, and now it became this.
+I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
+The user experience is a bit rough around the edges but it's functional.
 
+Expect updates, as this is gonna be my little "project" for the next little while.
 
 ### Requirements
 - Windows 10 x64 PC
@@ -13,10 +15,15 @@ I originally wrote it to make flashing a logo to my Pinecil easier, and now it b
 - Your Pinecil needs to have the WinUSB driver installed
 - Compatible logo image
 
-Instructions and more are in the README.
-
 ### Usage
-Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside.
+Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
+
+TLDR:
+- Throw compatible logo image into the folder
+- Connect Pinecil in DFU if you haven't already
+- Run utility
+- If no errors, you're done
+
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
@@ -25,6 +32,9 @@ No updating mechanism is implemented. You can check the releases page for new ve
 No support is provided. Use of this application is your own responsibility.\
 Instructions and more are in the README.
 
+### Contribution
+Contribution is welcomed and you can contribute as easily as opening an issue to request a feature, reporting a bug or opening a pull request to improve the script or the documentation.
+
 ### Credits
 Most of the documentation, and the img2ts100.py script:
 https://github.com/Ralim/IronOS/blob/v2.14.1/Documentation/Logo.md
@@ -32,10 +42,10 @@ https://github.com/Ralim/IronOS/blob/v2.14.1/Documentation/Logo.md
 The objcopy binary used in this bundle:
 https://github.com/metalcode-eu/windows-arm-none-eabi/blob/master/bin/arm-none-eabi-objcopy.exe
 
-The dfu-util binary used in this bundle:
-http://dfu-util.sourceforge.net/releases/
+The dfu-util 0.10 binary used in this bundle:
+http://dfu-util.sourceforge.net/releases
 
 As for the licensing, I own nothing but the script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
 
-If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) if you have any concerns with the usage of these files or for removal.\
-This was a quick project for my convenience, and I don't intend to violate any licensing terms.
+If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of these files or for removal.\
+This was a quick project for my convenience, and I don't intend to violate any licensing terms or profit off of this.
