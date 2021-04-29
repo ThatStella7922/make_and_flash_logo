@@ -35,6 +35,7 @@ https://github.com/metalcode-eu/windows-arm-none-eabi/blob/master/bin/arm-none-e
 The dfu-util binary used in this bundle:
 http://dfu-util.sourceforge.net/releases/
 
-As for the licensing, I own nothing but the script and provided documentation. If you use/modify the script (no commercial use pls), just credit me.
+As for the licensing, I own nothing but the script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
 
-If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) if you have any concerns with the usage of these files or for removal.
+If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) if you have any concerns with the usage of these files or for removal.\
+This was a quick project for my convenience, and I don't intend to violate any licensing terms.
