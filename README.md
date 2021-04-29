@@ -1,5 +1,5 @@
 # make_and_flash_logo
-by ThatsNiceGuy - Bundle Version 1.1\
+by ThatsNiceGuy - Bundle Version 1.2\
 A bundle to convert and flash a logo to your Pinecil.
 
 I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
