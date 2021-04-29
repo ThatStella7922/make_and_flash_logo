@@ -24,6 +24,13 @@ TLDR:
 - Run utility
 - If no errors, you're done
 
+### Included scripts
+- The main make_and_flash_logo script
+  - This will easily and quickly convert and flash a logo to your Pinecil in one click.
+- make_logo
+  - This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats
+- flash_logo 
+  - This script will easily and quickly flash a converted logo to the Pinecil.
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
@@ -45,7 +52,7 @@ https://github.com/metalcode-eu/windows-arm-none-eabi/blob/master/bin/arm-none-e
 The dfu-util 0.10 binary used in this bundle:
 http://dfu-util.sourceforge.net/releases
 
-As for the licensing, I own nothing but the script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
+As for the licensing, I own nothing but the make_and_flash_logo script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
 
 If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of these files or for removal.\
 This was a quick project for my convenience, and I don't intend to violate any licensing terms or profit off of this.

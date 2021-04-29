@@ -1,10 +1,11 @@
 REM The input image must be called logo.png or else this won't work!
 @echo off
-set "version=v1.1"
+set "version=v1.2"
 set "toolname=make_and_flash_logo"
+set "subtext=A tiny utility for quick logo conversion and flashing in one click for the Pinecil."
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
-echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
+echo %subtext%
 echo.
 
 echo Please ensure you have read the README file before using this utility.
@@ -25,7 +26,7 @@ echo.
 
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
-echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
+echo %subtext%
 echo.
 title %toolname% - converting
 echo Converting PNG logo to hex...
@@ -41,7 +42,7 @@ timeout -t 1 /nobreak > nul
 
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
-echo A tiny utility for quick logo conversion and flashing in one click for the Pinecil.
+echo %subtext%
 echo.
 echo Preparing to flash logo to Pinecil...
 timeout -t 1 /nobreak > nul
@@ -59,7 +60,6 @@ del resources\temp.hex
 del resources\temp.bin
 echo.
 echo.
-
 
 title %toolname% - done
 echo Done! If you see "File downloaded successfully" above then all went well.
