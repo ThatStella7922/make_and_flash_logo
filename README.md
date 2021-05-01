@@ -18,8 +18,8 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 ### Usage
 Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
 
-TLDR:
-- Throw compatible logo image into the folder
+TLDR (but please do read the README):
+- Throw your logo.png into the folder
 - Connect Pinecil in DFU if you haven't already
 - Run utility
 - If no errors, you're done
