@@ -13,7 +13,9 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 - Pillow needs to be installed with Pip
 - Your Pinecil must be running IronOS
 - Your Pinecil needs to have the WinUSB driver installed
-- Compatible logo image (96x16 black and white only)
+- Compatible logo image
+  - 96x16 black and white only
+  - Example image included
 
 ### Usage
 Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
