@@ -13,7 +13,7 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 - Pillow needs to be installed with Pip
 - Your Pinecil must be running IronOS
 - Your Pinecil needs to have the WinUSB driver installed
-- Compatible logo image
+- Compatible logo image (96x16 black and white only)
 
 ### Usage
 Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
@@ -25,12 +25,14 @@ TLDR:
 - If no errors, you're done
 
 ### Included scripts
-- The main make_and_flash_logo script
-  - This will easily and quickly convert and flash a logo to your Pinecil in one click.
+- (**Recommended**) make_and_flash_logo script
+  - This will easily and quickly convert and flash a logo to your Pinecil in one click, handling everything behind the scenes and leaving your original logo image untouched.
+
+If you need only some of the functionality of this script, there are also two smaller scripts:
 - make_logo
-  - This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats
+  - This script will easily and quickly convert a logo to the Pinecil (`.bin`) and TS100/TS80/TS80P (`.hex`) formats
 - flash_logo 
-  - This script will easily and quickly flash a converted logo to the Pinecil.
+  - This script will easily and quickly flash a converted logo to the Pinecil. (TS100/TS80/TS80P flashing is not supported)
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
@@ -40,7 +42,7 @@ No support is provided. Use of this application is your own responsibility.\
 Instructions and more are in the README.
 
 ### Contribution
-Contribution is welcomed and you can contribute as easily as opening an issue to request a feature, reporting a bug or opening a pull request to improve the script or the documentation.
+Contribution is welcomed and you can contribute as easily as opening an issue to report a bug or opening a pull request to improve the script or the documentation.
 
 ### Credits
 Most of the documentation, and the img2ts100.py script:
@@ -55,4 +57,4 @@ http://dfu-util.sourceforge.net/releases
 As for the licensing, I own nothing but the make_and_flash_logo script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
 
 If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of these files or for removal.\
-This was a quick project for my convenience, and I don't intend to violate any licensing terms or profit off of this.
+This is a small project for my convenience, and I don't intend to violate any licensing terms or profit off of this.
