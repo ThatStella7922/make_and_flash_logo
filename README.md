@@ -35,9 +35,15 @@ If you need only some of the functionality of this script, there are also two sm
   - This script will easily and quickly convert a logo to the Pinecil (`.bin`) and TS100/TS80/TS80P (`.hex`) formats
 - flash_logo 
   - This script will easily and quickly flash a converted logo to the Pinecil. (TS100/TS80/TS80P flashing is not supported)
+- flash_ts100ᵇᵉᵗᵃ - will be added later
+  - This script will flash a converted logo to a TS100/TS80/TS80P. 
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
+
+Version 1.3/2.0 is in development.
+
+ᵇᵉᵗᵃ may be available soon but idk
 
 ### Support
 No support is provided. Use of this application is your own responsibility.\
