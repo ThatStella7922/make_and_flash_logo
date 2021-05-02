@@ -1,5 +1,5 @@
 # make_and_flash_logo
-by ThatsNiceGuy - Bundle Version 1.2\
+by ThatsNiceGuy - Bundle Version 2.0\
 A bundle to convert and flash a logo to your Pinecil.
 
 I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
@@ -21,7 +21,7 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
 
 TLDR (but please do read the README):
-- Throw your logo.png into the folder
+- (Optional) Throw your logo.png into the folder
 - Connect Pinecil in DFU if you haven't already
 - Run utility
 - If no errors, you're done
@@ -35,15 +35,9 @@ If you need only some of the functionality of this script, there are also two sm
   - This script will easily and quickly convert a logo to the Pinecil (`.bin`) and TS100/TS80/TS80P (`.hex`) formats
 - flash_logo 
   - This script will easily and quickly flash a converted logo to the Pinecil. (TS100/TS80/TS80P flashing is not supported)
-- flash_ts100ᵇᵉᵗᵃ - will be added later
-  - This script will flash a converted logo to a TS100/TS80/TS80P. 
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
-
-Version 1.3/2.0 is in development.
-
-ᵇᵉᵗᵃ may be available soon but idk
 
 ### Support
 No support is provided. Use of this application is your own responsibility.\
