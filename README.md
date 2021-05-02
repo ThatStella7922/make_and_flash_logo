@@ -3,9 +3,16 @@ by ThatsNiceGuy - Bundle Version 2.0\
 A bundle to convert and flash a logo to your Pinecil.
 
 I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
-The user experience is a bit rough around the edges but it's functional.
+Now, the user experience is pretty decent.
 
 Expect updates, as this is gonna be my little "project" for the next little while.
+
+### Features
+- Quick and easy logo conversion and flashing
+- Good (it's still a command prompt window) user experience
+- Error handling
+- Basic Preferences system
+- ???
 
 ### Requirements
 - Windows 10 x64 PC
@@ -18,12 +25,13 @@ Expect updates, as this is gonna be my little "project" for the next little whil
   - Example image included
 
 ### Usage
-Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the README inside. It contains plenty of info.
+Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the INSTRUCTION inside. It contains plenty of info.
 
-TLDR (but please do read the README):
+TLDR (but please do read the INSTRUCTION):
 - (Optional) Throw your logo.png into the folder
 - Connect Pinecil in DFU if you haven't already
 - Run utility
+  - If the utility can't find the logo.png, it will ask you to provide the path/filename of one
 - If no errors, you're done
 
 ### Included scripts
@@ -41,7 +49,7 @@ No updating mechanism is implemented. You can check the releases page for new ve
 
 ### Support
 No support is provided. Use of this application is your own responsibility.\
-Instructions and more are in the README.
+Instructions and more are in the INSTRUCTION.
 
 ### Contribution
 Contribution is welcomed and you can contribute as easily as opening an issue to report a bug or opening a pull request to improve the script or the documentation.
