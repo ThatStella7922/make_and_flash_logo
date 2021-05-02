@@ -13,7 +13,7 @@ What is a compatible logo image:
   96x16 image with only black and white - No color.
   Black is recommended for the background color of your image.
 
-  See example.png in the same directory as this README for an example
+  See example.png in the same directory as this INSTRUCTION for an example
   or flash it to your Pinecil if you want.
 
 How to put your Pinecil into DFU mode:
@@ -35,14 +35,14 @@ Instructions:
 
   3. Run the utility------------
     a) Connect your Pinecil in DFU mode if it isn't already connected.
-    b) Run 'make_and_flash_logo.bat'. It's in the same folder as this README.
+    b) Run 'make_and_flash_logo.bat'. It's in the same folder as this INSTRUCTION.
        If the script is unable to find a file called 'logo.png' in the same folder as the
        script, it will prompt you for the logo image.
 
        This will easily and quickly convert and flash a logo to your Pinecil in one click.
 
-    Optional - skips the utility asking for imagep ath
-    a) Place your logo image inside the same folder as this README file.
+    Optional - skips the utility asking for image path
+    a) Place your logo image inside the same folder as this INSTRUCTION file.
     b) Rename your logo image to logo.png if it isn't already called that.
 
     Other included scripts:
