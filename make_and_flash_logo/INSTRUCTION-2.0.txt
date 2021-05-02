@@ -1,4 +1,4 @@
-make_and_flash_logo by ThatsNiceGuy - Script, README and CHANGELOG Version 1.2
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.0
 A bundle to convert and flash your logo to a Pinecil.
 
 Requirements:
@@ -14,7 +14,7 @@ What is a compatible logo image:
   Black is recommended for the background color of your image.
 
   See example.png in the same directory as this README for an example
-  or rename it to logo.png to flash it to your Pinecil if you want.
+  or flash it to your Pinecil if you want.
 
 How to put your Pinecil into DFU mode:
   While holding down the - button, plug it into your PC.
@@ -34,11 +34,16 @@ Instructions:
 
 
   3. Run the utility------------
+    a) Connect your Pinecil in DFU mode if it isn't already connected.
+    b) Run 'make_and_flash_logo.bat'. It's in the same folder as this README.
+       If the script is unable to find a file called 'logo.png' in the same folder as the
+       script, it will prompt you for the logo image.
+
+       This will easily and quickly convert and flash a logo to your Pinecil in one click.
+
+    Optional - skips the utility asking for imagep ath
     a) Place your logo image inside the same folder as this README file.
     b) Rename your logo image to logo.png if it isn't already called that.
-    c) Connect your Pinecil in DFU mode if it isn't already connected.
-    d) Run 'make_and_flash_logo.bat'. It's in the same folder as this README.
-       This will easily and quickly convert and flash a logo to your Pinecil in one click.
 
     Other included scripts:
     - make_logo

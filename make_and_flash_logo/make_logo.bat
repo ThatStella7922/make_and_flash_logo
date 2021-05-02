@@ -1,4 +1,4 @@
-REM The input image must be called logo.png or else this won't work!
+:: The input image must be called logo.png or else this won't work!
 @echo off
 set "version=v1.2"
 set "toolname=make_logo"

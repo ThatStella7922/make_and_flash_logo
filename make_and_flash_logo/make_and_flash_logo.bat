@@ -1,53 +1,132 @@
-REM The input image must be called logo.png or else this won't work!
 @echo off
-set "version=v1.2"
+set "version=v2.0"
 set "toolname=make_and_flash_logo"
 set "subtext=A tiny utility for quick logo conversion and flashing in one click for the Pinecil."
+set "logo=logo.png"
+title %toolname%
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
 echo.
 
-echo Please ensure you have read the README file before using this utility.
+echo Please ensure you have read the INSTRUCTION file before using this utility.
 echo You can also read the CHANGELOG to learn about the changes in this version.
 echo.
 
+:firsttimesetup
+echo Checking for preferences file...
+If exist resources\setuphasrun2-0 goto checkpinecil
+title %toolname% - first time setup
+
+echo.
+echo.
+echo We couldn't find a preferences file for this version, so first
+echo time setup will need to be run for you to set your preferences.
+echo.
+timeout -t 2 /nobreak > nul
+echo Welcome to %toolname% %version% setup!
+echo.
+echo Skip asking if your Pinecil is connected in DFU mode?
+echo If you enable this, the utility will run without checking if the
+echo Pinecil is connected. This could cause failed flashes.
+echo. 
+echo Do you want to enable this feature?
+CHOICE /C YN
+IF %ERRORLEVEL% EQU 2 goto firsttimesetupdisableskippinecilcheck
+IF %ERRORLEVEL% EQU 1 goto firsttimesetupenableskippinecilcheck
+
+:firsttimesetupenableskippinecilcheck
+echo.
+echo This is a configuration file for make_and_flash_logo. If you delete it, the application will behave unexpectedly based on the preferences you set during first time setup. > resources\skippinecilcheck2-0
+echo Succesfully enabled skippinecilcheck2-0.
+echo.
+goto firsttimesetupcomplete
+
+:firsttimesetupdisableskippinecilcheck
+echo.
+del /Q resources\skippinecilcheck2-0 >nul 2>&1
+echo Succesfully disabled skippinecilcheck2-0.
+echo.
+goto firsttimesetupcomplete
+
+:firsttimesetupcomplete
+echo This file tells make_and_flash_logo that you finished first time setup. If you delete it, you'll have to complete first time setup again. >> resources\setuphasrun2-0
+echo You have completed first time setup. The script will now continue normally.
+timeout -t 4 /nobreak > nul
+cls
+echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
+echo %subtext%
+echo.
+goto checkpinecil
+
+:checkpinecil
 title %toolname% - preparing
-echo Press any key to confirm that the Pinecil is connected in DFU mode and that the 
-echo logo is in the same directory as this batch file and is named logo.png.
+If exist resources\skippinecilcheck2-0 goto checkforlogo
+:: ^ check if the user disabled the pinecil check, if the file exists then it is disabled
+:: v here we ask the user to confirm that the pinecil is connected
+echo.
+echo Press any key to confirm that the Pinecil is connected in DFU mode.
 echo.
 echo This utility will not work otherwise.
 timeout -t -1 > nul
-echo.
+:: ^ wait indefinitely until the user presses any key
+cls
+echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
+echo %subtext%
 echo.
 echo User has confirmed that the Pinecil is connected in DFU mode -- Continuing...
 echo.
-echo.
 
+:checkforlogo
+If exist resources\skippinecilcheck2-0 echo Pinecil DFU check skipped.
+If exist resources\skippinecilcheck2-0 echo.
+echo Looking for logo.png...
+echo.
+If exist "%logo%" goto convert
+:: ^ here we check if the image exists and if it does, skip to the convert section
+:: v this is shown if the logo isn't found
+echo An error has occured - the logo image wasn't found.
+echo To continue, enter the filename of the logo (with extension) or paste in its path.
+set /p "logo= --> "
+If exist "%logo%" goto convert
+echo.
+goto logonotfound
+
+:logonotfound
+echo The utility cannot find the logo image you specified.
+echo The filename/path you provided was '%logo%', check it and try again.
+echo Paste the filename/path of the logo image...
+set /p "logo= --> "
+echo.
+If exist "%logo%" goto convert
+goto logonotfound
+
+:convert
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
 echo.
 title %toolname% - converting
-echo Converting PNG logo to hex...
-python resources\img2ts100.py logo.png resources\temp.hex
-echo.
-echo.
 
-echo Converting hex logo to binary...
+If not exist resources\temp.hex goto noprevioustemphex
+del resources\temp.hex
+del resources\temp.bin
+
+:noprevioustemphex
+python resources\img2ts100.py %logo% resources\temp.hex
 resources\objcopy.exe -I ihex -O binary resources\temp.hex resources\temp.bin
 echo.
-echo.
-timeout -t 1 /nobreak > nul
 
+:flash
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
 echo.
+echo Logo was succesfully converted.
+echo.
 echo Preparing to flash logo to Pinecil...
 timeout -t 1 /nobreak > nul
 title %toolname% - flashing logo to Pinecil
-echo.
 echo.
 echo Flashing logo to Pinecil...
 echo.
@@ -55,6 +134,7 @@ resources\dfu-util.exe -d 28e9:0189 -a 0 -D resources\temp.bin -s 0x0800f800
 echo.
 echo.
 
+:deltempfiles
 echo Deleting temporary files...
 del resources\temp.hex
 del resources\temp.bin
@@ -65,5 +145,5 @@ title %toolname% - done
 echo Done! If you see "File downloaded successfully" above then all went well.
 echo Thanks for using %toolname% %version% by ThatsNiceGuy!
 echo.
-echo Press any key or wait 15s to exit.
-timeout -t 15 > nul
+echo Press any key or wait 30s to exit.
+timeout -t 30 > nul

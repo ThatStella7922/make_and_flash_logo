@@ -1,7 +1,34 @@
-make_and_flash_logo by ThatsNiceGuy - Script, README and CHANGELOG Version 1.2
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 1.2
 A bundle to convert and flash your logo to a Pinecil.
 
 Changelog:
+
+Version 2.0
+
+  Important note: this release was set as "finished" by me while like half asleep.
+
+  • Scripts
+    • make_and_flash_logo
+      - Implement basic preferences system
+      - Allow skipping the check at the beginning of the script where you are
+        asked to confirm that your Pinecil is connected in DFU mode
+      - Prevent "no such file or directory" or "error reading image file" or
+        "[Errno 2]" errors by asking user for file if not automatically found.
+      - Apply fix to prevent "won't overwrite existing file" errors.
+      - Use variables across more of the script
+
+  • INSTRUCTION
+    - Change name to INSTRUCTION from README. This was done to help prevent
+      confusion between the repo's README.md and the README.txt.
+    
+
+  • CHANGELOG
+    - Update for v2.0
+
+  • Bundled files
+    - No changes
+
+--------------------------------
 
 Version 1.2
   • Scripts

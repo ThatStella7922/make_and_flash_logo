@@ -1,4 +1,4 @@
-REM The input logo must be called logo.bin or else this won't work!
+:: The input logo must be called logo.bin or else this won't work!
 @echo off
 set "version=v1.2"
 set "toolname=flash_logo"
