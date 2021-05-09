@@ -25,6 +25,8 @@ Instructions:
   1. Installing Pillow (python 3 must be the default)
     a) pip install Pillow
 
+    If you do not install Pillow, the script will error out and ask for PIL. PIL will not work! You *must* use Pillow!
+
   2. Installing the WinUSB driver-----------
   If you already did this, skip this part.
     a) Get Zadig from https://zadig.akeo.ie

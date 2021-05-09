@@ -1,4 +1,4 @@
-make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 1.2
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.0
 A bundle to convert and flash your logo to a Pinecil.
 
 Changelog:
@@ -6,6 +6,7 @@ Changelog:
 Version 2.0
 
   Important note: this release was set as "finished" by me while like half asleep.
+  Important note 2: Fixed on May 9th, 2021
 
   • Scripts
     • make_and_flash_logo
