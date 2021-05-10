@@ -3,6 +3,36 @@ A bundle to convert and flash your logo to a Pinecil.
 
 Changelog:
 
+Version 2.1
+
+  • Scripts
+    • New scripts added - see INSTRUCTION for what they do
+      - flash_ironos
+
+    • make_and_flash_logo
+      - Refine preferences system
+      - Use even more variables
+
+    • flash_ironos
+      - Implement the same preferences system and error handling
+        from make_and_flash_logo
+
+    • flash_logo
+      - Implement the same preferences system and error handling
+        from make_and_flash_logo
+      - Switch to using most of make_and_flash_logo's code
+
+  • INSTRUCTION
+    - Add info about new script
+
+  • CHANGELOG
+    - Update for v2.1
+
+  • Bundled files
+    - No changes
+
+--------------------------------
+
 Version 2.0
 
   Important note: this release was set as "finished" by me while like half asleep.

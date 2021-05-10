@@ -1,4 +1,4 @@
-make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.0
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.1
 A bundle to convert and flash your logo to a Pinecil.
 
 Requirements:
@@ -52,6 +52,8 @@ Instructions:
       - This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats
     - flash_logo 
       - This script will easily and quickly flash a converted logo to the Pinecil.
+    - flash_iron
+      - This script will quickly flash an updated IronOS to your Pinecil that is already running IronOS
 
 
   4. Troubleshoot-----------
@@ -63,6 +65,9 @@ Instructions:
 
        You can also try waiting a few minutes until you hear Windows'
        'device unplugged' sound.
+
+       Ensure that no other application is trying to use the device
+       (for example, virtual machine software)
 
 
 Credits:

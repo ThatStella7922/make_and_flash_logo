@@ -1,8 +1,9 @@
 :: The input image must be called logo.png or else this won't work!
 @echo off
-set "version=v1.2"
+set "version=v2.1"
 set "toolname=make_logo"
 set "subtext=A tiny utility for quick logo conversion in one click for the Pinecil."
+set "logo=logo.png"
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
@@ -13,24 +14,36 @@ echo You can also read the CHANGELOG to learn about the changes in this version.
 echo.
 
 title %toolname% - preparing
-echo Press any key to confirm that the logo is in the same directory as this batch file
-echo and is named logo.png.
+echo Looking for %logo%...
 echo.
-echo This utility will not work otherwise.
-timeout -t -1 > nul
+If exist "%logo%" goto convert
+:: ^ here we check if the image exists and if it does, skip to the convert section
+:: v this is shown if the logo isn't found
+echo An error has occured - the logo image wasn't found.
+echo To continue, enter the filename of the logo (with extension) or paste in its path.
+set /p "logo= --> "
+If exist "%logo%" goto convert
 echo.
-echo.
-echo User has confirmed that the logo is in the proper directory -- Continuing...
-echo.
-echo.
+goto logonotfound
 
+:logonotfound
+echo The utility cannot find the logo image you specified.
+echo The filename/path you provided was '%logo%', check it and try again.
+echo Paste the filename/path of the logo image...
+set /p "logo= --> "
+echo.
+If exist "%logo%" goto convert
+goto logonotfound
+
+:convert
 cls
 echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
 echo.
 title %toolname% - converting
+copy %logo% resources\temp.png 1>nul
 echo Converting PNG logo to hex...
-python resources\img2ts100.py logo.png logo.hex
+python resources\img2ts100.py resources\temp.png logo.hex
 echo.
 echo.
 
@@ -42,10 +55,8 @@ timeout -t 1 /nobreak > nul
 
 cls
 echo Deleting temporary files...
-echo No temporary files to delete - skipping.
+del resources\temp.png
 echo.
-echo.
-
 
 title %toolname% - done
 echo Done! You should now have a 'logo.bin' and a 'logo.hex' file in the main folder.

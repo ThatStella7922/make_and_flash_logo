@@ -1,5 +1,5 @@
 @echo off
-set "version=v2.0"
+set "version=v2.1"
 set "toolname=make_and_flash_logo"
 set "subtext=A tiny utility for quick logo conversion and flashing in one click for the Pinecil."
 set "logo=logo.png"
@@ -15,10 +15,9 @@ echo.
 
 :firsttimesetup
 echo Checking for preferences file...
-If exist resources\setuphasrun2-0 goto checkpinecil
+If exist resources\%toolname%-setuphasrun%version%.cfg goto checkpinecil
 title %toolname% - first time setup
 
-echo.
 echo.
 echo We couldn't find a preferences file for this version, so first
 echo time setup will need to be run for you to set your preferences.
@@ -32,25 +31,25 @@ echo Pinecil is connected. This could cause failed flashes.
 echo. 
 echo Do you want to enable this feature?
 CHOICE /C YN
-IF %ERRORLEVEL% EQU 2 goto firsttimesetupdisableskippinecilcheck
-IF %ERRORLEVEL% EQU 1 goto firsttimesetupenableskippinecilcheck
+IF %ERRORLEVEL% EQU 2 goto setupdisableskippinecilcheck
+IF %ERRORLEVEL% EQU 1 goto setupenableskippinecilcheck
 
-:firsttimesetupenableskippinecilcheck
+:setupenableskippinecilcheck
 echo.
-echo This is a configuration file for make_and_flash_logo. If you delete it, the application will behave unexpectedly based on the preferences you set during first time setup. > resources\skippinecilcheck2-0
-echo Succesfully enabled skippinecilcheck2-0.
+echo This is a configuration file for %toolname%. If you delete it, the application will behave unexpectedly based on the preferences you set during first time setup. > resources\%toolname%-enableskippinecilcheck%version%.cfg
+echo Succesfully enabled %toolname%-enableskippinecilcheck%version%.
 echo.
-goto firsttimesetupcomplete
+goto setupcomplete
 
-:firsttimesetupdisableskippinecilcheck
+:setupdisableskippinecilcheck
 echo.
-del /Q resources\skippinecilcheck2-0 >nul 2>&1
-echo Succesfully disabled skippinecilcheck2-0.
+del /Q resources\%toolname%-enableskippinecilcheck%version%.cfg >nul 2>&1
+echo Succesfully disabled %toolname%-enableskippinecilcheck%version%.
 echo.
-goto firsttimesetupcomplete
+goto setupcomplete
 
-:firsttimesetupcomplete
-echo This file tells make_and_flash_logo that you finished first time setup. If you delete it, you'll have to complete first time setup again. >> resources\setuphasrun2-0
+:setupcomplete
+echo This file tells %toolname% that you finished first time setup. If you delete it, you'll have to complete first time setup again. > resources\%toolname%-setuphasrun%version%.cfg
 echo You have completed first time setup. The script will now continue normally.
 timeout -t 4 /nobreak > nul
 cls
@@ -61,7 +60,7 @@ goto checkpinecil
 
 :checkpinecil
 title %toolname% - preparing
-If exist resources\skippinecilcheck2-0 goto checkforlogo
+If exist resources\%toolname%-enableskippinecilcheck%version%.cfg goto checkforlogo
 :: ^ check if the user disabled the pinecil check, if the file exists then it is disabled
 :: v here we ask the user to confirm that the pinecil is connected
 echo.
@@ -78,9 +77,9 @@ echo User has confirmed that the Pinecil is connected in DFU mode -- Continuing.
 echo.
 
 :checkforlogo
-If exist resources\skippinecilcheck2-0 echo Pinecil DFU check skipped.
-If exist resources\skippinecilcheck2-0 echo.
-echo Looking for logo.png...
+If exist resources\%toolname%-enableskippinecilcheck%version%.cfg echo Pinecil DFU check skipped.
+If exist resources\%toolname%-enableskippinecilcheck%version%.cfg echo.
+echo Looking for %logo%...
 echo.
 If exist "%logo%" goto convert
 :: ^ here we check if the image exists and if it does, skip to the convert section
