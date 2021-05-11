@@ -129,7 +129,7 @@ title %toolname% - flashing logo to Pinecil
 echo.
 echo Flashing logo to Pinecil...
 echo.
-resources\dfu-util.exe -d 28e9:0189 -a 0 -D resources\temp.bin -s 0x0800f800
+resources\dfu-util.exe -d 28e9:0189 -a 0 -D resources\temp.bin -s 0x0801F800
 echo.
 echo.
 

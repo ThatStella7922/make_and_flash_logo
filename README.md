@@ -18,7 +18,7 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 - Windows 10 x64 PC
 - Python 3.x must be installed and callable via just 'python'
 - Pillow needs to be installed with Pip
-- Your Pinecil must be running IronOS
+- Your Pinecil must be running IronOS v2.15 or later
 - Your Pinecil needs to have the WinUSB driver installed
 - Compatible logo image
   - 96x16 black and white only
@@ -45,6 +45,8 @@ If you need only some of the functionality of this script, there are also two sm
   - This script will easily and quickly flash a converted logo to the Pinecil. (TS100/TS80/TS80P flashing is not supported)
 - flash_ironos
   - This script will quickly flash an updated IronOS to your Pinecil that is already running IronOS
+
+Instructions for all the scripts are in the INSTRUCTION
 
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.

@@ -5,7 +5,7 @@ Requirements:
   - Windows 10 x64 PC
   - Python 3.x must be installed and callable via just 'python'
   - Pillow needs to be installed with Pip
-  - Your Pinecil must be running IronOS
+  - Your Pinecil must be running IronOS v2.15 or later
   - Your Pinecil needs to have the WinUSB driver installed
   - Compatible logo image
 
@@ -21,7 +21,18 @@ How to put your Pinecil into DFU mode:
   The Pinecil's display will remain blank if you succesfully entered DFU.
   You can let go once you hear the 'device connected' sound from Windows.
 
-Instructions:
+Included scripts:
+  - make_and_flash_logo
+    - This will easily and quickly convert and flash a logo to your Pinecil in one click, handling
+      everything behind the scenes and leaving your original logo image untouched.
+  - make_logo
+    - This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats
+  - flash_logo 
+    - This script will easily and quickly flash a converted logo to the Pinecil.
+  - flash_ironos
+    - This script will quickly flash an updated IronOS to your Pinecil that is already running IronOS
+
+Instructions for make_and_flash_logo:
   1. Installing Pillow (python 3 must be the default)
     a) pip install Pillow
 
@@ -47,16 +58,93 @@ Instructions:
     a) Place your logo image inside the same folder as this INSTRUCTION file.
     b) Rename your logo image to logo.png if it isn't already called that.
 
-    Other included scripts:
-    - make_logo
-      - This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats
-    - flash_logo 
-      - This script will easily and quickly flash a converted logo to the Pinecil.
-    - flash_iron
-      - This script will quickly flash an updated IronOS to your Pinecil that is already running IronOS
+  4. Troubleshoot-----------
+    a) "Cannot open DFU device 28e9:0189"
+       Check that the WinUSB driver is installed for the Pinecil in Zadig.
 
+       If the driver is already installed, try reconnecting your Pinecil
+       (of course in DFU mode)
+
+       You can also try waiting a few minutes until you hear Windows'
+       'device unplugged' sound.
+
+       Ensure that no other application is trying to use the device
+       (for example, virtual machine software)
+
+Instructions for make_logo:
+  1. Installing Pillow (python 3 must be the default)
+    a) pip install Pillow
+
+    If you do not install Pillow, the script will error out and ask for PIL. PIL will not work! You *must* use Pillow!
+
+  2. Run the utility------------
+    a) Connect your Pinecil in DFU mode if it isn't already connected.
+    b) Run 'make_logo.bat'. It's in the same folder as this INSTRUCTION.
+       If the script is unable to find a file called 'logo.png' in the same folder as the
+       script, it will prompt you for the logo image.
+
+       This script will easily and quickly convert a logo to the Pinecil and TS100/TS80/TS80P formats.
+
+    Optional - skips the utility asking for image path
+    a) Place your logo image inside the same folder as this INSTRUCTION file.
+    b) Rename your logo image to logo.png if it isn't already called that.
+
+Instructions for flash_logo:
+  1. Installing the WinUSB driver-----------
+  If you already did this, skip this part.
+    a) Get Zadig from https://zadig.akeo.ie
+    b) Connect your Pinecil in DFU mode
+    b) Ensure Zadig shows a USB ID of 28e9 0189, then install the WinUSB driver.
+    c) You should be done. If it fails, restart your PC and retry.
+
+
+  2. Run the utility------------
+    a) Connect your Pinecil in DFU mode if it isn't already connected.
+    b) Run 'flash_logo.bat'. It's in the same folder as this INSTRUCTION.
+       If the script is unable to find a file called 'logo.bin' in the same folder as the
+       script, it will prompt you for the logo file.
+
+       This will easily and quickly convert and flash a logo to your Pinecil in one click.
+
+    Optional - skips the utility asking for logo path
+    a) Place your converted .bin logo inside the same folder as this INSTRUCTION file.
+    b) Rename your converted logo to logo.bin if it isn't already called that.
 
   4. Troubleshoot-----------
+    a) "Cannot open DFU device 28e9:0189"
+       Check that the WinUSB driver is installed for the Pinecil in Zadig.
+
+       If the driver is already installed, try reconnecting your Pinecil
+       (of course in DFU mode)
+
+       You can also try waiting a few minutes until you hear Windows'
+       'device unplugged' sound.
+
+       Ensure that no other application is trying to use the device
+       (for example, virtual machine software)
+
+Instructions for flash_ironos:
+  1. Installing the WinUSB driver-----------
+  If you already did this, skip this part.
+    a) Get Zadig from https://zadig.akeo.ie
+    b) Connect your Pinecil in DFU mode
+    b) Ensure Zadig shows a USB ID of 28e9 0189, then install the WinUSB driver.
+    c) You should be done. If it fails, restart your PC and retry.
+
+
+  2. Run the utility------------
+    a) Connect your Pinecil in DFU mode if it isn't already connected.
+    b) Run 'flash_ironos.bat'. It's in the same folder as this INSTRUCTION.
+       If the script is unable to find a file called 'Pinecil_EN.bin' in the same folder as the
+       script, it will prompt you for the logo image.
+
+       The script looks for Pinecil_EN.bin by default because the developer uses the English IronOS.
+
+    Optional - skips the utility asking for image path
+    a) Place your IronOS firmware .bin inside the same folder as this INSTRUCTION file.
+    b) Rename your IronOS firmware .bin to 'Pinecil_EN.bin' if it isn't already called that.
+
+  3. Troubleshoot-----------
     a) "Cannot open DFU device 28e9:0189"
        Check that the WinUSB driver is installed for the Pinecil in Zadig.
 

@@ -9,21 +9,26 @@ Version 2.1
     • New scripts added - see INSTRUCTION for what they do
       - flash_ironos
 
+    • Use the new IronOS logo location in scripts that involve logo
+      flashing. You MUST update your Pinecil to IronOS v2.15 or later!
+
     • make_and_flash_logo
       - Refine preferences system
       - Use even more variables
 
     • flash_ironos
-      - Implement the same preferences system and error handling
-        from make_and_flash_logo
+      - Implement the same preferences system and error handling from
+        make_and_flash_logo
 
     • flash_logo
-      - Implement the same preferences system and error handling
-        from make_and_flash_logo
+      - Implement the same preferences system and error handling from
+        make_and_flash_logo
       - Switch to using most of make_and_flash_logo's code
-
+ 
   • INSTRUCTION
     - Add info about new script
+    - Add actual instructions for all the scripts
+    - Explictly say that v2.15 (or newer) of IronOS is required
 
   • CHANGELOG
     - Update for v2.1
