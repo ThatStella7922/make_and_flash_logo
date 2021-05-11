@@ -1,3 +1,4 @@
+![Logo image](logo.png)
 # make_and_flash_logo
 by ThatsNiceGuy - Bundle Version 2.1\
 A bundle to convert and flash a logo to your Pinecil.
