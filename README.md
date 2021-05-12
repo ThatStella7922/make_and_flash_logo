@@ -53,6 +53,12 @@ Instructions for all the scripts are in the INSTRUCTION
 ### Updates
 No updating mechanism is implemented. You can check the releases page for new versions.
 
+#### Repo Version vs Currently Available Release?
+Repo Version you can think of like a nightly build or something built on every commit. **Likely untested, probably unfinished things.** To use these, you can check whether the repo version is higher than the currently available release version and if true then clone the repo and run stuff. This is not recommended to do because as said previously stuff is unfinished and sometimes untested.
+
+Currently Available Release is something I fully finish, test, and call it 'good enough to release'. These are fully done releases and you can fully use them.\
+See **Usage** above for details on how to get the releases.
+
 ### Support
 No support is provided. Use of this application is your own responsibility.\
 Instructions and more are in the INSTRUCTION.
