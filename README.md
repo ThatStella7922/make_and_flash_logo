@@ -82,3 +82,6 @@ As for the licensing, I own nothing but the make_and_flash_logo script and provi
 
 If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of these files or for removal.\
 This is a small project for my convenience, and I don't intend to violate any licensing terms or profit off of this.
+
+Thanks for looking!
+With ❤️ from ThatsNiceGuy
