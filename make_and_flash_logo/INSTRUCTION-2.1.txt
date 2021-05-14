@@ -1,6 +1,9 @@
 make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.1
 A bundle to convert and flash your logo to a Pinecil.
 
+If you have any issues, please see if this document, the CHANGELOG, or GitHub README contain any answers.
+If not, you can open an issue on the GitHub.
+
 Requirements:
   - Windows 10 x64 PC
   - Python 3.x must be installed and callable via just 'python'
