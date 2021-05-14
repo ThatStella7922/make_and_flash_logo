@@ -1,4 +1,4 @@
-make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.0
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.1
 A bundle to convert and flash your logo to a Pinecil.
 
 Changelog:
@@ -11,6 +11,8 @@ Version 2.1
 
     • Use the new IronOS logo location in scripts that involve logo
       flashing. You MUST update your Pinecil to IronOS v2.15 or later!
+      - If you don't want to update your Pinecil, you must use
+        make_and_flash_logo v2.0 or older.
 
     • make_and_flash_logo
       - Refine preferences system

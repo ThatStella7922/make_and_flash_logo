@@ -6,6 +6,8 @@ Requirements:
   - Python 3.x must be installed and callable via just 'python'
   - Pillow needs to be installed with Pip
   - Your Pinecil must be running IronOS v2.15 or later
+    - For this version (v2.1) and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
+      - Use v2.0 or older of make_and_flash_logo if you don't want to update your Pinecil.
   - Your Pinecil needs to have the WinUSB driver installed
   - Compatible logo image
 

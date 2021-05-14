@@ -1,7 +1,7 @@
 ![Logo image](logo.png)
 # make_and_flash_logo
 by ThatsNiceGuy - Repo Version v2.1\
-Currently Available [Release](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases) is v2.0\
+Currently Available [Release](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases) is v2.1\
 A bundle to convert and flash a logo to your Pinecil.
 
 I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
@@ -21,6 +21,8 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 - Python 3.x must be installed and callable via just 'python'
 - Pillow needs to be installed with Pip
 - Your Pinecil must be running IronOS v2.15 or later
+  - For this version (v2.1) and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
+    - Use v2.0 or older of make_and_flash_logo if you don't want to update your Pinecil.
 - Your Pinecil needs to have the WinUSB driver installed
 - Compatible logo image
   - 96x16 black and white only
