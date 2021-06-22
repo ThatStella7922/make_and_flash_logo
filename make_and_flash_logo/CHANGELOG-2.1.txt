@@ -26,6 +26,10 @@ Version 2.1
       - Implement the same preferences system and error handling from
         make_and_flash_logo
       - Switch to using most of make_and_flash_logo's code
+
+    • make_logo
+      - Implement the same preferences system and error handling from
+        make_and_flash_logo
  
   • INSTRUCTION
     - Add info about new script
