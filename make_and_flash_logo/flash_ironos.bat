@@ -1,5 +1,5 @@
 @echo off
-set "version=v2.1"
+set "version=v2.11"
 set "toolname=flash_ironos"
 set "subtext=A tiny utility to flash IronOS in one click for the Pinecil."
 set "file=Pinecil_EN.bin"

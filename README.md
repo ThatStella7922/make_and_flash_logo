@@ -1,13 +1,13 @@
 ![Logo image](logo.png)
 # make_and_flash_logo
-by ThatsNiceGuy - Repo Version v2.1\
-Currently Available [Release](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases) is v2.1\
+by ThatsNiceGuy - Repo Version v2.11\
+Currently Available [Release](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases) is v2.11\
 A bundle to convert and flash a logo to your Pinecil.
 
 I originally wrote this small "utility" (more like script) to make flashing a logo to my Pinecil easier, as entering the commands manually to convert, convert again and then flash to my Pincil was getting really annoying. After a bit of time, I had this ready and after some polishing up, I decided it was ready to be released.\
-Now, the user experience is pretty decent.
+After lots of updates, the user experience is now pretty decent.
 
-Expect updates, as this is gonna be my little "project" for the next little while.
+Expect some updates, as this is gonna be my little "project" for the next little while.
 
 ### Features
 - Quick and easy logo conversion and flashing
@@ -19,13 +19,15 @@ Expect updates, as this is gonna be my little "project" for the next little whil
 ### Requirements
 - Windows 10 x64 PC
 - Python 3.x must be installed and callable via just 'python'
-- Pillow needs to be installed with Pip
+  - basically just make sure it's in your PATH variable
+- Pillow needs to be installed via Pip
+  - **PIL (Python Imaging Library) will not work! You need Pillow!**
 - Your Pinecil must be running IronOS v2.15 or later
-  - For this version (v2.1) and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
+  - For version v2.1 and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
     - Use v2.0 or older of make_and_flash_logo if you don't want to update your Pinecil.
-- Your Pinecil needs to have the WinUSB driver installed
+- Your Pinecil needs to have the WinUSB driver installed (You can use [Zadig](https://zadig.akeo.ie/) to install it)
 - Compatible logo image
-  - 96x16 black and white only
+  - 96x16 monochrome (black and white) PNG file
   - Example image included
 
 ### Usage
@@ -35,8 +37,8 @@ TLDR (but please do read the INSTRUCTION):
 - (Optional) Throw your logo.png into the folder
 - Connect Pinecil in DFU if you haven't already
 - Run utility
-  - If the utility can't find the logo.png, it will ask you to provide the path/filename of one
-- If no errors, you're done
+  - If the utility can't find the logo.png, it will ask you to provide the path/filename of the logo
+- If no errors, your Pinecil will now show your custom logo on boot!
 
 ### Included scripts
 - (**Recommended**) make_and_flash_logo script
@@ -56,21 +58,22 @@ Instructions for all the scripts are in the INSTRUCTION
 No updating mechanism is implemented. You can check the releases page for new versions.
 
 #### Repo Version vs Currently Available Release?
-Repo Version you can think of like a nightly build or something built on every commit. **Likely untested, probably unfinished things.** To use these, you can check whether the repo version is higher than the currently available release version and if true then clone the repo and run stuff. This is not recommended to do because as said previously stuff is unfinished and sometimes untested.
+Repo Version you can think of like a nightly build or something built on every commit. **Likely untested, probably unfinished things.** To use these, you can check whether the repo version is higher than the currently available release version, and if it is then you can clone the repo and poke at the files. This is not recommended to do because as said previously stuff is unfinished and sometimes untested.
 
-Currently Available Release is something I fully finish, test, and call it 'good enough to release'. These are fully done releases and you can fully use them.\
+Currently Available Release is something I finish, test, and call 'good enough to release'. These are complete releases.\
 See **Usage** above for details on how to get the releases.
 
-### Support
-No support is provided. Use of this application is your own responsibility.\
-Instructions and more are in the INSTRUCTION.
+### Limitation of Liability
+By using any of the scripts provided here, you agree that you take full responsibility for anything that may happen, whether it be a successful flash or a bricked Pinecil. I will work with you to resolve bugs, BUT I am not obligated to replace damaged hardware (if any) or compensate you in any way.
+  
+Your use of these scripts are your responsibility and I will not be held responsible if anything happens.
 
 ### Contribution
-Contribution is welcomed and you can contribute as easily as opening an issue to report a bug or opening a pull request to improve the script or the documentation.
+Contribution is welcomed and you can contribute as easily as opening an issue to report bugs or opening a pull request to improve the script or the documentation.
 
 ### Credits
 Most of the documentation, and the img2ts100.py script:
-https://github.com/Ralim/IronOS/blob/v2.14.1/Documentation/Logo.md
+https://github.com/Ralim/IronOS/blob/master/Documentation/Logo.md
 
 The objcopy binary used in this bundle:
 https://github.com/metalcode-eu/windows-arm-none-eabi/blob/master/bin/arm-none-eabi-objcopy.exe
@@ -80,8 +83,8 @@ http://dfu-util.sourceforge.net/releases
 
 As for the licensing, I own nothing but the make_and_flash_logo script and provided documentation. If you use/modify my script, just credit me. No monetary use of it is allowed. Other files used here may have different policies.
 
-If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of these files or for removal.\
+If you are the owner of any of the included binaries, please [contact me](https://github.com/ThatsNiceGuy/ThatsNiceGuy#contact) or open an issue if you have any concerns with the usage of or removal of these files.\
 This is a small project for my convenience, and I don't intend to violate any licensing terms or profit off of this.
 
-Thanks for looking!
+Thanks for looking!\
 With ❤️ from ThatsNiceGuy

@@ -1,5 +1,5 @@
 @echo off
-set "version=v2.1"
+set "version=v2.11"
 set "toolname=make_and_flash_logo"
 set "subtext=A tiny utility for quick logo conversion and flashing in one click for the Pinecil."
 set "logo=logo.png"

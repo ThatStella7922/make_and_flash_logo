@@ -1,7 +1,21 @@
-make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.1
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.11
 A bundle to convert and flash your logo to a Pinecil.
 
+For optimal viewing of this document, please turn off text wrapping or widen the window
+enough so that the line below is not split:
+-----------------------------------------------------------------------------------------
+
 Changelog:
+
+Version 2.11
+
+  • Update all documentation in some minor form or another.
+  • Remove redundant or outdated comments from the scripts.
+  • Remove references to the README.txt (it was renamed to INSTRUCTION.txt in v2.0)
+
+    No other changes were made besides incrementing version numbers.
+
+--------------------------------
 
 Version 2.1
 
@@ -9,8 +23,8 @@ Version 2.1
     • New scripts added - see INSTRUCTION for what they do
       - flash_ironos
 
-    • Use the new IronOS logo location in scripts that involve logo
-      flashing. You MUST update your Pinecil to IronOS v2.15 or later!
+    • Use the new IronOS logo location in scripts that involve logo flashing. You MUST
+      update your Pinecil to IronOS v2.15 or later!
       - If you don't want to update your Pinecil, you must use
         make_and_flash_logo v2.0 or older.
 
@@ -47,21 +61,21 @@ Version 2.1
 Version 2.0
 
   Important note: this release was set as "finished" by me while like half asleep.
-  Important note 2: Fixed on May 9th, 2021
+  Important note 2: Fixed on May 9th, 2021, please redownload if downloaded before this!
 
   • Scripts
     • make_and_flash_logo
       - Implement basic preferences system
-      - Allow skipping the check at the beginning of the script where you are
-        asked to confirm that your Pinecil is connected in DFU mode
+      - Allow skipping the check at the beginning of the script where you are asked to
+        confirm that your Pinecil is connected in DFU mode
       - Prevent "no such file or directory" or "error reading image file" or
         "[Errno 2]" errors by asking user for file if not automatically found.
       - Apply fix to prevent "won't overwrite existing file" errors.
       - Use variables across more of the script
 
   • INSTRUCTION
-    - Change name to INSTRUCTION from README. This was done to help prevent
-      confusion between the repo's README.md and the README.txt.
+    - Change name to INSTRUCTION from README. This was done to help prevent confusion
+      between the repo's README.md and the README.txt.
     
 
   • CHANGELOG

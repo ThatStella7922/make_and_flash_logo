@@ -1,5 +1,9 @@
-make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.1
+make_and_flash_logo by ThatsNiceGuy - Script, INSTRUCTION and CHANGELOG Version 2.11
 A bundle to convert and flash your logo to a Pinecil.
+
+For optimal viewing of this document, please turn off text wrapping or widen the window enough so that the line below
+is not split:
+------------------------------------------------------------------------------------------------------------------------
 
 If you have any issues, please see if this document, the CHANGELOG, or GitHub README contain any answers.
 If not, you can open an issue on the GitHub.
@@ -7,19 +11,16 @@ If not, you can open an issue on the GitHub.
 Requirements:
   - Windows 10 x64 PC
   - Python 3.x must be installed and callable via just 'python'
+    - basically just make sure it's in your PATH variable
   - Pillow needs to be installed with Pip
+    - PIL (Python Imaging Library) will not work! You need Pillow!
   - Your Pinecil must be running IronOS v2.15 or later
-    - For this version (v2.1) and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
+    - For version v2.1 and later of make_and_flash_logo, IronOS v2.15 or later is MANDATORY.
       - Use v2.0 or older of make_and_flash_logo if you don't want to update your Pinecil.
-  - Your Pinecil needs to have the WinUSB driver installed
+  - Your Pinecil needs to have the WinUSB driver installed (you can use Zadig to install it)
   - Compatible logo image
-
-What is a compatible logo image:
-  96x16 image with only black and white - No color.
-  Black is recommended for the background color of your image.
-
-  See example.png in the same directory as this INSTRUCTION for an example
-  or flash it to your Pinecil if you want.
+    - 96x16 monochrome (black and white) PNG file
+    - Example image included
 
 How to put your Pinecil into DFU mode:
   While holding down the - button, plug it into your PC.

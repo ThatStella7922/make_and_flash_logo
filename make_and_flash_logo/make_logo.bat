@@ -1,6 +1,5 @@
-:: The input image must be called logo.png or else this won't work!
 @echo off
-set "version=v2.1"
+set "version=v2.11"
 set "toolname=make_logo"
 set "subtext=A tiny utility for quick logo conversion in one click for the Pinecil."
 set "logo=logo.png"
@@ -9,7 +8,7 @@ echo %toolname% %version% - By ThatsNiceGuy 2021 - Uses binaries not owned by me
 echo %subtext%
 echo.
 
-echo Please ensure you have read the README file before using this utility.
+echo Please ensure you have read the INSTRUCTION file before using this utility.
 echo You can also read the CHANGELOG to learn about the changes in this version.
 echo.
 
