@@ -18,6 +18,7 @@ Expect some updates, as this is gonna be my little "project" for the next little
 
 ### Requirements
 - Windows 10 x64 PC
+  - macOS and Linux support aren't supported.
 - Python 3.x must be installed and callable via just 'python'
   - basically just make sure it's in your PATH variable
 - Pillow needs to be installed via Pip
