@@ -18,7 +18,7 @@ Expect some updates, as this is gonna be my little "project" for the next little
 
 ### Requirements
 - Windows 10 x64 PC
-  - macOS and Linux aren't supported.
+  - macOS and Linux aren't supported and there are no plans for supporting these OSes.
 - Python 3.x must be installed and callable via just 'python'
   - basically just make sure it's in your PATH variable
 - Pillow needs to be installed via Pip
@@ -32,14 +32,20 @@ Expect some updates, as this is gonna be my little "project" for the next little
   - Example image included
 
 ### Usage
-Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases), then unzip it and open the INSTRUCTION inside. It contains plenty of info.
+1. Download the latest version from [Releases](https://github.com/ThatsNiceGuy/make_and_flash_logo/releases) and unzip it
+2. **(Optional)** Place your `logo.png` inside the folder, same place where the scripts are.\
+<sub>If you don't do this, you will be asked for the file path in scripts that convert logos.</sub>
 
-TLDR (but please do read the INSTRUCTION):
-- (Optional) Throw your logo.png into the folder
-- Connect Pinecil in DFU if you haven't already
-- Run utility
-  - If the utility can't find the logo.png, it will ask you to provide the path/filename of the logo
-- If no errors, your Pinecil will now show your custom logo on boot!
+Now you can either:
+- Quick use:
+  1. Connect Pinecil in DFU if you haven't already
+  2. Run make_and_flash_logo
+  3. Go through initial setup if you haven't already
+  4. (Provide path of the logo if asked) and wait for it to convert
+  5. If no errors, your Pinecil will now show your custom logo on boot!
+
+- Read the INSTRUCTION to know the full capabilities and features
+  1. This is what I recommend, it has extra notes and stuff in it.
 
 ### Included scripts
 - (**Recommended**) make_and_flash_logo script
