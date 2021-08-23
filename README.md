@@ -38,11 +38,12 @@ Expect some updates, as this is gonna be my little "project" for the next little
 
 Now you can either:
 - Quick use:
-  1. Connect Pinecil in DFU if you haven't already
-  2. Run make_and_flash_logo
-  3. Go through initial setup if you haven't already
-  4. (Provide path of the logo if asked) and wait for it to convert
-  5. If no errors, your Pinecil will now show your custom logo on boot!
+  1. Connect Pinecil in DFU mode
+  2. Install WinUSB driver to Pinecil using [Zadig](https://zadig.akeo.ie/)
+  3. Run make_and_flash_logo
+  4. Complete initial setup if you haven't already
+  5. (Provide path of the logo if asked) and wait for it to convert
+  6. If no errors, your Pinecil will now show your custom logo on boot!
 
 - Read the INSTRUCTION to know the full capabilities and features
   1. This is what I recommend, it has extra notes and stuff in it.
